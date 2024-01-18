@@ -1,52 +1,52 @@
 import React, { useEffect } from 'react';
-import { TweenMax } from 'gsap';
+// import { TweenMax } from 'gsap';
 
 const Landing = () => {
   useEffect(() => {
-    const bigBall = document.querySelector('.cursor__ball--big');
-    const smallBall = document.querySelector('.cursor__ball--small');
-    const hoverables = document.querySelectorAll('.hoverable');
+    // const bigBall = document.querySelector('.cursor__ball--big');
+    // const smallBall = document.querySelector('.cursor__ball--small');
+    // const hoverables = document.querySelectorAll('.hoverable');
 
     
-    document.body.addEventListener('mousemove', onMouseMove);
-    for (let i = 0; i < hoverables.length; i++) {
-      hoverables[i].addEventListener('mouseenter', onMouseHover);
-      hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
-    }
+    // document.body.addEventListener('mousemove', onMouseMove);
+    // for (let i = 0; i < hoverables.length; i++) {
+    //   hoverables[i].addEventListener('mouseenter', onMouseHover);
+    //   hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
+    // }
 
     
-    function onMouseMove(e) {
-      TweenMax.to(bigBall, 0.4, {
-        x: e.pageX - 15,
-        y: e.pageY - 15,
-      });
-      TweenMax.to(smallBall, 0.1, {
-        x: e.pageX - 5,
-        y: e.pageY - 7,
-      });
-    }
+    // function onMouseMove(e) {
+    //   TweenMax.to(bigBall, 0.4, {
+    //     x: e.pageX - 15,
+    //     y: e.pageY - 15,
+    //   });
+    //   TweenMax.to(smallBall, 0.1, {
+    //     x: e.pageX - 5,
+    //     y: e.pageY - 7,
+    //   });
+    // }
 
     
-    function onMouseHover() {
-      TweenMax.to(bigBall, 0.3, {
-        scale: 4,
-      });
-    }
+    // function onMouseHover() {
+    //   TweenMax.to(bigBall, 0.3, {
+    //     scale: 4,
+    //   });
+    // }
 
-    function onMouseHoverOut() {
-      TweenMax.to(bigBall, 0.3, {
-        scale: 1,
-      });
-    }
+    // function onMouseHoverOut() {
+    //   TweenMax.to(bigBall, 0.3, {
+    //     scale: 1,
+    //   });
+    // }
 
     
-    return () => {
-      document.body.removeEventListener('mousemove', onMouseMove);
-      for (let i = 0; i < hoverables.length; i++) {
-        hoverables[i].removeEventListener('mouseenter', onMouseHover);
-        hoverables[i].removeEventListener('mouseleave', onMouseHoverOut);
-      }
-    };
+    // return () => {
+    //   document.body.removeEventListener('mousemove', onMouseMove);
+    //   for (let i = 0; i < hoverables.length; i++) {
+    //     hoverables[i].removeEventListener('mouseenter', onMouseHover);
+    //     hoverables[i].removeEventListener('mouseleave', onMouseHoverOut);
+    //   }
+    // };
   }, []); 
 
   return (
@@ -65,11 +65,7 @@ const Landing = () => {
         </div>
       </div>
 
-      <div className="left">
-        <h1>Hello</h1>
-        <p>Check out this link:</p>
-        <a className="hoverable">Hover meh</a>
-      </div>
+      
 
       <div className="right">
         <h1>Hello</h1>
